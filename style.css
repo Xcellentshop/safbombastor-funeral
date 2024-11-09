@@ -1,0 +1,279 @@
+:root {
+    --primary-color: #1a56db;
+    --secondary-color: #374151;
+    --accent-color: #059669;
+    --background-color: #f3f4f6;
+    --text-color: #1f2937;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo-img {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+}
+
+.btn-call {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-call:hover {
+    background-color: #047857;
+}
+
+/* Espaço adicional no conteúdo para não ficar encoberto pelo cabeçalho fixo */
+body > .container {
+    padding-top: 80px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 1rem; /* Aumenta o espaçamento para maior visibilidade */
+    text-align: center;
+    background-color: white;
+    margin-top: 80px; /* Garante que o conteúdo fique abaixo do cabeçalho fixo */
+}
+
+.hero h2 {
+    font-size: 3rem; /* Aumenta o tamanho do título */
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-weight: bold; /* Destaca o título */
+}
+
+.hero p {
+    font-size: 1.5rem; /* Aumenta o tamanho do texto do parágrafo */
+    color: var(--secondary-color);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2.5rem; /* Adiciona mais espaço abaixo do parágrafo */
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px 10px rgba(37, 211, 102, 0);
+    }
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.25rem;
+    transition: background-color 0.2s;
+    animation: pulse 1.5s infinite; /* Adiciona o efeito de pulsação */
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+}
+
+
+/* Services Section */
+.services {
+    padding: 4rem 0;
+}
+
+.services h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-card svg {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+.btn-saiba-mais {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #1e40af;
+}
+
+/* FAQ Section */
+.faq {
+    padding: 4rem 0;
+    background-color: white;
+}
+
+.faq h2 {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+details {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+}
+
+summary {
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--secondary-color);
+}
+
+details p {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    color: var(--text-color);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.footer h3 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.125rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
